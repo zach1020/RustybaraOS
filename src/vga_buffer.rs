@@ -136,16 +136,4 @@ impl Writer {
 		}
 	}
 }
-
-use lazy_static::lazy_static;
-
-
-lazy_static! {
-	pub static WRITER: Writer = Writer {
-		column_position: 0,
-		color_code: ColorCode::new(Color::Yellow, Color::Black),
-		buffer: unsafe { &mut *(0xb8000 as *mut Buffer) },
-	};
-}
-
 // Left off at Spinlocks https://os.phil-opp.com/vga-text-mode/#spinlocks 
