@@ -99,7 +99,6 @@ pub fn print_something() {
 	};
 
 	writer.write_string("Hello, RustybaraOS!");
-	write!(writer, "The numbers are {} and {}", 42, 1.0/3.0).unwrap();
 }
 
 use core::fmt;
